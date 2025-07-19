@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Chowking</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'ZCOOL KuaiLe', cursive;
+    }
+    header.hero {
+      background-color: #b30000;
+      padding: 100px 20px;
+    }
+    h1, h2, h3 {
+      color: #b30000;
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+    img {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border-radius: 12px;
+    }
+      .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease-in-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .btn-chowking {
+      background-color: #b30000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-chowking:hover {
+      background-color: #900000;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg shadow-sm" style="background-color: #ffffff;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="https://i.imgur.com/1KWNdCJ.png" alt="Chowking Logo" style="height: 60px; box-shadow: none;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-danger fw-bold" href="Chowking.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active text-danger fw-bold" href="ChowkingAbout.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-danger fw-bold" href="ChowkingMenu.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link text-danger fw-bold" href="ChowkingLogin.html">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero text-center" style="background-color: #ff5e5e; padding: 100px 20px;">
+    <div class="container">
+      <h1 style="color: white; font-size: 3.5rem; font-weight: bold;">About Chowking</h1>
+      <p style="color: white; font-size: 1.5rem; font-style: italic;">Where Chinese and Filipino flavors come together</p>
+    </div>
+  </header>
+
+  <section class="py-5 fade-in">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mb-4">
+          <img src="https://www.chowking.ph/wp-content/uploads/2024/01/Franchising-1920-2024.jpg" alt="Chowking Story" class="img-fluid rounded shadow w-100">
+        </div>
+        <div class="col-md-12">
+          <h2>Our Story</h2>
+          <p>Chowking was founded in 1985, bringing together two of the most loved cuisines—Chinese and Filipino. Our story began with a vision to make Chinese-style fast food more accessible to Filipinos through quick-service dining that combines flavor, convenience, and affordability.</p>
+          <p>We became part of Jollibee Foods Corporation in 2000, strengthening our operations and reach. Today, Chowking is a household name with hundreds of stores nationwide and even expanding internationally.</p>
+        </div>
+        <div class="col-md-12 mt-4">
+          
+        </div>
+        
+          <h3>Our Mission</h3>
+          <p>To serve great tasting Chinese food that everyone can enjoy, anytime and anywhere.</p>
+          <h3>What Sets Us Apart</h3>
+          <p>We serve a wide variety of Chinese dishes with a Filipino twist—from Chao Fan and Siomai to our signature Halo-Halo. What makes us stand out is our commitment to quality, affordable prices, and warm service that makes you feel at home.</p>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+</section>
+
+  <footer class="text-center p-4 mt-5" style="background-color: #b30000; color: white;">
+    &copy; 2025 Chowking. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.3 };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  });
+</script>
+</body>
+</html>
+

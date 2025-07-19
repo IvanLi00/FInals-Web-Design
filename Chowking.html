@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chowking | Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <style>
+    .carousel-inner img {
+      max-width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: contain;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: red;
+      border-radius: 50%;
+      padding: 10px;
+      background-size: 60% 60%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    body {
+      font-family: 'ZCOOL KuaiLe', cursive;
+      background-color: #fff8f0;
+    }
+
+    header.hero {
+      background: linear-gradient(rgba(255,0,0,0.6), rgba(255,0,0,0.6)), url('/mnt/data/dfc75d2f-7456-47f9-968e-9accd6d54ca4.png') center/cover no-repeat;
+      color: white;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+    }
+
+    .feature-card {
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      border: none;
+      border-radius: 1rem;
+    }
+
+    .feature-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      background-color: #b30000;
+      color: white;
+    }
+
+    .welcome-heading {
+      color: white;
+    }
+      .navbar-brand {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+    }
+
+    .card-text {
+      font-size: 0.95rem;
+    }
+
+    .card img {
+      height: 300px;
+      object-fit: cover;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+
+    .card-body {
+      background-color: #fffdf9;
+    }
+
+    .feature-card {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    section.bg-light {
+      background-color: #fceaea !important;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 2rem;
+    }
+      .nav-link.text-danger.fw-bold:hover {
+      color: #8b0000 !important;
+      text-decoration: underline;
+    }
+      .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #b30000;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 10px 15px;
+      cursor: pointer;
+      z-index: 99;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg shadow-sm" style="background-color: #ffffff;">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+  <img src="https://i.imgur.com/1KWNdCJ.png" alt="Chowking Logo" style="height: 60px;">
+</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active text-danger fw-bold" href="Chowking.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-danger fw-bold" href="ChowkingAbout.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-danger fw-bold" href="ChowkingMenu.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link text-danger fw-bold" href="ChowkingLogin.html">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero text-center fade-in">
+    <div class="container">
+      <h1 class="welcome-heading fade-in" id="animatedHeading">Welcome to Chowking</h1>
+      <p>Your favorite Chinese fast food experience, now online.</p>
+      <a href="products.html" class="btn btn-light btn-lg mt-3">See Our Menu</a>
+    </div>
+  </header>
+
+  <section class="container my-5 fade-in">
+  <h2 class="text-center mb-4 text-danger">Featured Meals</h2>
+  <div id="mealCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item active text-center">
+        <img src="https://www.chowking.ph/wp-content/uploads/2023/09/Pork-Chao-Fan-650x547-1.png" class="d-block mx-auto w-50" alt="Chao Fan">
+        <h5 class="mt-3 text-danger">Chao Fan</h5>
+      </div>
+      <div class="carousel-item text-center">
+        <img src="https://www.chowking.ph/wp-content/uploads/2023/09/Wonton-Mami-650-x-547px.png" class="d-block mx-auto w-50" alt="Noodles">
+        <h5 class="mt-3 text-danger">Noodles</h5>
+      </div>
+      <div class="carousel-item text-center">
+        <img src="https://www.chowking.ph/wp-content/uploads/2023/09/Chinese-Style-Fried-Chicken-Lauriat-650x547-1.png" class="d-block mx-auto w-50" alt="Lauriat">
+        <h5 class="mt-3 text-danger">Lauriat</h5>
+      </div>
+      <div class="carousel-item text-center">
+        <img src="https://www.chowking.ph/wp-content/uploads/2023/09/8PC-Chinese-Style-Fried-Chicken-650x547-1.png" class="d-block mx-auto w-50" alt="Chicken Bucket">
+        <h5 class="mt-3 text-danger">Chicken Bucket</h5>
+      </div>
+      <div class="carousel-item text-center">
+        <img src="https://www.chowking.ph/wp-content/uploads/2023/09/SuperSangkap-Halo-Halo-650x547-1.png" class="d-block mx-auto w-50" alt="Halo-Halo">
+        <h5 class="mt-3 text-danger">Halo-Halo</h5>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#mealCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mealCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+  <section class="bg-light py-5 fade-in">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <div class="col-md-6">
+          <h3 class="text-danger fw-bold">Dine-In or Order Online</h3>
+          <p>Enjoy our meals in any of our hundreds of branches nationwide or have them delivered to your doorstep. We aim to bring you a delicious and affordable Chinese fast food experience every time.</p>
+          <a href="ChowkingAbout.html" class="btn btn-danger">Learn More About Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center p-4 mt-5">
+    &copy; 2025 Chowking. All rights reserved.
+    <div class="mt-2">
+    <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <button onclick="topFunction()" id="scrollTopBtn" title="Go to top" style="display: none;"><i class='bi bi-caret-up-fill'></i></button>
+  <script>
+    const btn = document.getElementById("scrollTopBtn");
+    window.onscroll = function () {
+      btn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
+    };
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+<script>
+  // Fade in elements on scroll
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+  faders.forEach(fader => appearOnScroll.observe(fader));
+
+  // New animation: fade-in + scale animation for welcome heading
+  const heading = document.getElementById('animatedHeading');
+  heading.style.opacity = 0;
+  heading.style.transform = 'scale(0.8)';
+  setTimeout(() => {
+    heading.style.transition = 'all 1s ease';
+    heading.style.opacity = 1;
+    heading.style.transform = 'scale(1)';
+  }, 300);
+</script>
+</body>
+</html>
+
